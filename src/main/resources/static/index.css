@@ -1,0 +1,249 @@
+:root {
+    --black: #000000;
+    --dkblue: #0d314b;
+    --blackligth: #102944;
+    --bluedark: #096aab;
+    --blue: #08b6ff;
+    --aqua: #00fffa;
+    --white: #ffffff;
+    --gray: #7c7777;
+    --greendark: #00747C;
+    --mono: 'Ubuntu Mono', monospace;
+    --sans: 'Ubuntu', sans-serif;
+    --font-size: 1.3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    max-width: 1500px;
+    margin: auto;
+    position: relative;
+    background-color: #00747C;
+}
+
+a {
+    text-decoration: none;
+}
+
+.headerimg {
+    max-width: 100%;
+    height: auto;
+}
+
+.containername {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(190, 183, 183);
+    letter-spacing: 4px;
+    font-family: var(--sans);
+}
+
+.name {
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    color: var(--white);
+    font-family: var(--mono);
+}
+
+.profesion {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+/* navbar */
+
+.item {
+    color: #000000;
+    margin: 0px;
+    padding: 11px;
+    border-radius: 4px;
+}
+
+.item:hover {
+
+    color: var(--white);
+}
+
+.nameportafolio {
+    margin-top: 10px;
+    font-family: var(--mono);
+}
+
+/* portafolio*/
+
+
+.potafolio {
+    display: flex;
+    margin: auto;
+    flex-flow: column wrap;
+    margin-top: 30px;
+}
+
+.imgportafolio {
+    max-width: 100%;
+    height: auto;
+    flex-basis: 85%;
+    margin-top: 20px;
+}
+
+/* contacto*/
+
+#contacto {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-color: #b4d3e0;
+}
+
+
+.form {
+    max-width: 800px;
+    background-color: #b4d3e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin-top: 1rem;
+    border-radius: 15px;
+
+}
+
+input {
+    width: 80%;
+    padding: 12px 20px;
+    border-radius: 15px;
+
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    resize: none;
+}
+
+input[type=submit]> {
+    max-width: 30%;
+    background-color: #00fffa;
+    margin-top: 1rem;
+
+}
+
+label {
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+
+@media(min-width:600px) {
+    header {
+        background: none;
+    }
+
+    .navbar {
+        position: absolute;
+        left: 50%;
+        bottom: -16px;
+        transform: translate(-50%, 0%);
+        background: var(--gray);
+    }
+
+    .profesion {
+        display: block;
+        text-align: center;
+        padding-bottom: 10px;
+        font-family: var(--sans);
+        color: var(--white);
+    }
+
+    .name {
+        font-size: 24px;
+        padding: 20px;
+        text-align: center;
+        color: var(--white);
+        font-family: var(--mono);
+    }
+
+    .item:hover {
+        background-color: rgb(136, 136, 134);
+
+    }
+
+
+
+    /* portafolio*/
+
+    #portafolio {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        align-items: center;
+        align-content: center;
+        margin-top: 80px;
+
+    }
+
+    .imgportafolio {
+        width: 800px;
+        height: 500px;
+    }
+
+    .portafolio {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .nameportafolio{
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+    .mensaje{
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .experiencia{
+
+        position: relative;
+
+    }
+    .experiencia::after{
+        content: "";
+        right: 0;
+        height: 100%;
+        position: absolute;
+        background-color: white;
+        animation: escribiendo 4s infinite alternate steps(39);
+        /*   width: 100%;   para mostrar el ancho de la caja que va a ocultar lo que se va a escribir;*/
+        border-left: 4px solid black;
+    }
+    @keyframes escribiendo {
+        0%{width: 100%;}
+        100%{width: 0%;}
+
+    }
+
+
+}

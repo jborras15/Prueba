@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&family=Ubuntu:wght@300&display=swap"
+              rel="stylesheet">
+
+        <title>Fotografo</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+    <header>
+
+        <img src="fotografa3.jpg" alt="photo"
+             class="headerimg">
+        <div class="containername">
+            <h1 class="name">Jorge Borras</h1>
+            <h3 class="profesion"> Fotografa</h3>
+        </div>
+        <div class="navbar">
+            <a class="item " href="#">Casa</a>
+            <a class="item" href="#portafolio">portafolio</a>
+            <a class="item" href="#contacto">Contacto</a>
+        </div>
+    </header >
+
+
+    <section id="portafolio">
+        <div>
+            <h2 class="nameportafolio" >Portafolio</h2>
+        </div>
+        <p class="mensaje">Soy una profecional: <span class="experiencia">con mas de 10 años de expericiencia.</span>  </p>
+
+        <div class="portafolio">
+            <img src="pexels-jaime-reimer-2662116.jpg" alt="paisaje" class="imgportafolio">
+            <img src="pico.jpg" alt="paisaje" class="imgportafolio">
+            <img src="lagos.jpg" alt="paisaje" class="imgportafolio">
+            <img src="llanura.jpg" alt="paisaje" class="imgportafolio">
+            <img src="paisaje5.jpeg" alt="paisaje" class="imgportafolio">
+        </div>
+    </section>
+
+    <sectio id="contacto">
+        <h2>Enviar su mensaje</h2>
+        <form class="form" action="https://formsubmit.co/jborras15@gmail.com" method="POST">
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email">
+            <label for="comentario">Comentario</label>
+            <textarea name="comentario" id="comentario" cols="40" rows="10"></textarea>
+            <input type="submit" value="Enviar">
+            <input type="hidden" name="_next" value="http://localhost:3000/">
+            <input type="hidden" name="_captcha" value="false">º
+        </form>
+    </sectio>
+    </body>
+</html>

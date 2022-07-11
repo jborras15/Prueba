@@ -28,6 +28,8 @@
             <a class="item " href="#">Casa</a>
             <a class="item" href="#portafolio">portafolio</a>
             <a class="item" href="#contacto">Contacto</a>
+            <a  sec:authorize="isAuthenticated()" class="item" th:href="@{/logout}">Logout</a>
+
         </div>
     </header >
 

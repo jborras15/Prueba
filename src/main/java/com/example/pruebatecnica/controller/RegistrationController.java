@@ -1,6 +1,6 @@
 package com.example.pruebatecnica.controller;
 
-import com.example.pruebatecnica.entity.User;
+import com.example.pruebatecnica.entity.Users;
 import com.example.pruebatecnica.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,9 +16,9 @@ public class RegistrationController {
     private UserService userService;
 
 
-    @ModelAttribute("user") 
-    public User returnNwUser(){
-        return new User();
+    @ModelAttribute("users")
+    public Users returnNwUser(){
+        return new Users();
     }
 
     @GetMapping
@@ -27,8 +27,8 @@ public class RegistrationController {
     }
 
     @PostMapping
-    public String registerUserAccount(@ModelAttribute("user") User user) {
-        userService.save(user);
+    public String registerUserAccount(@ModelAttribute("user") Users users) {
+        userService.save(users);
         return "redirect:/registration?success";
     }
 

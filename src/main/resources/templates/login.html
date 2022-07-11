@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&family=Ubuntu:wght@300&display=swap"
+          rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+<div id="contenedor">
+    <div th:if="${param.error}">
+        <div class="alert ">Usuario o password incorrecto</div>
+    </div>
+    <div th:if="${param.logout}">
+        <div class="alert ">Cerro seccion correctamente </div>
+    </div>
+    <h1 >Ingresar</h1>
+    <form th:action="@{/login}" method="post" >
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Ingresa tu Email.."
+                required autofocus="autofocus">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa Tu password.."
+               required autofocus="autofocus">
+
+
+        <input type="submit" value="Login">
+        <span> <a href="/" th:href="@{/registration}"> Registrarse</a></span>
+    </form>
+</div>
+
+</body>
+</html>

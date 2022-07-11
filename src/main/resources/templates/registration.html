@@ -18,7 +18,7 @@
             <div class="alert ">Te has registrado satifactoriamente</div>
         </div>
         <h1 >Registrarse</h1>
-        <form th:action="@{/registration}" method="post" th:object="${user}" >
+        <form th:action="@{/registration}" method="post" th:object="${users}" >
             <label for="firstname">First Name</label>
             <input type="text" id="firstname" name="firstname" placeholder="Tu nombre.."
                    th:field="*{firstName}" required autofocus="autofocus">
@@ -29,8 +29,8 @@
             <input type="email" id="email" name="email" placeholder="Tu correo.."
                    th:field="*{email}" required autofocus="autofocus">
             <label for="password">Password</label>
-            <input type="text" id="password" name="password" placeholder="Tu password.."
-                   th:field="*{lastName}" required autofocus="autofocus">
+            <input type="password" id="password" name="password" placeholder="Tu password.."
+                   th:field="*{password}" required autofocus="autofocus">
             <input type="submit" value="Registrar">
             <span>Si ya estas registrado pueder ir al <a href="/" th:href="@{/login}"> Login</a></span>
         </form>

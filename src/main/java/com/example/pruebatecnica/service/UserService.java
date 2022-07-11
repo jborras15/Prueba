@@ -1,9 +1,10 @@
 package com.example.pruebatecnica.service;
 
-import com.example.pruebatecnica.entity.User;
+import com.example.pruebatecnica.entity.Users;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 
-public interface UserService {
-    User save(User user);
+public interface UserService extends UserDetailsService {
+    Users save(Users users);
 
 }

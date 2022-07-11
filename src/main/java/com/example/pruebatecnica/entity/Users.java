@@ -10,7 +10,7 @@ import java.util.Collection;
 @Data
 @Table(name = "user",
         uniqueConstraints = @UniqueConstraint(columnNames ="email" ))
-public class User {
+public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,7 +35,7 @@ public class User {
                     referencedColumnName = "id"))
     private Collection<Role> roles;
 
-    public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
+    public Users(String firstName, String lastName, String email, String password, Collection<Role> roles) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -43,7 +43,9 @@ public class User {
         this.roles = roles;
     }
 
-    public User() {
+    public Users() {
 
     }
+
+
 }

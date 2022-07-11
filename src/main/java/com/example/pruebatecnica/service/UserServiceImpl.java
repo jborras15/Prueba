@@ -29,8 +29,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users save(Users user) {
-        Users usuario=new Users(user.getFirstName(),
-                user.getLastName(), user.getEmail(),
+        Users usuario=new Users(user.getFullName(), user.getEmail(),
                 passwordEncoder.encode(user.getPassword()),Arrays.asList(new Role("ROLE_USER")));
 
         return  userRepository.save(usuario);
@@ -43,7 +42,7 @@ public class UserServiceImpl implements UserService {
         if(user==null){
             throw new UsernameNotFoundException("Usuario o contraseña incorrecta.");
         }
-        return new User(user.getEmail(), user.getPassword(), mapRolesToAuthorities(user.getRoles()));
+        return new User(user.getFullName(), user.getPassword(), mapRolesToAuthorities(user.getRoles()));
 
     }
 

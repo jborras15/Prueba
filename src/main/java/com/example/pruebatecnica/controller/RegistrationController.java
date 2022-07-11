@@ -37,12 +37,14 @@ public class RegistrationController {
     @PostMapping
     public String registerUserAccount(@Valid @ModelAttribute("user") Users users , RedirectAttributes redirectAttributes, BindingResult result) {
         Users existing = userRepository.findByEmail(users.getEmail());
-        if (existing != null) {
+
+        if (existing != null ) {
             redirectAttributes
                     .addFlashAttribute("mensaje", "El correo ya existe ")
                     .addFlashAttribute("clase", "danger");
             return "redirect:registration";
         }
+
         userService.save(users);
         return "redirect:/registration?success";
     }

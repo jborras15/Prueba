@@ -17,10 +17,11 @@ public class Users {
     private Long id;
 
     @Column(name="first_name")
-    private String firstName;
+    private String fullName;
 
-    @Column(name="last_name")
-    private String lastName;
+
+
+
 
     private String email;
 
@@ -35,9 +36,10 @@ public class Users {
                     referencedColumnName = "id"))
     private Collection<Role> roles;
 
-    public Users(String firstName, String lastName, String email, String password, Collection<Role> roles) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+
+
+    public Users(String fullName, String email, String password, Collection<Role> roles) {
+        this.fullName = fullName;
         this.email = email;
         this.password = password;
         this.roles = roles;

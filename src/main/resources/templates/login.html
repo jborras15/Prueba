@@ -15,12 +15,12 @@
 <body>
 <div id="contenedor">
     <div th:if="${param.error}">
-        <div class="alert ">Usuario o password incorrecto</div>
+        <div class="danger ">Usuario o password incorrecto</div>
     </div>
     <div th:if="${param.logout}">
         <div class="alert ">Cerro seccion correctamente </div>
     </div>
-    <h1 >Ingresar</h1>
+    <h1 >Inicio de sesion</h1>
     <form th:action="@{/login}" method="post" >
         <label for="username">Username</label>
         <input type="text" id="username" name="username" placeholder="Ingresa tu Email.."
@@ -31,7 +31,7 @@
 
 
         <input type="submit" value="Login">
-        <span> <a href="/" th:href="@{/registration}"> Registrarse</a></span>
+        <span> Si no tienes cuenta  <a href="/" th:href="@{/registration}"> registrate aqui</a></span>
     </form>
 </div>
 

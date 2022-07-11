@@ -16,12 +16,8 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="first_name")
+    @Column(name="full_name")
     private String fullName;
-
-
-
-
 
     private String email;
 
@@ -35,7 +31,6 @@ public class Users {
             inverseJoinColumns = @JoinColumn(name = "role_id",
                     referencedColumnName = "id"))
     private Collection<Role> roles;
-
 
 
     public Users(String fullName, String email, String password, Collection<Role> roles) {

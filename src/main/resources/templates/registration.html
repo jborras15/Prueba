@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&family=Ubuntu:wght@300&display=swap"
+          rel="stylesheet">
+    <title>Registro</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div>
+        <div th:if="${param.success}">
+            <div class="alert ">Te has registrado satifactoriamente</div>
+        </div>
+        <h1 >Registrarse</h1>
+        <form th:action="@{/registration}" method="post" th:object="${user}" >
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Tu nombre.."
+                   th:field="*{firstName}" required autofocus="autofocus">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Tu apellido.."
+                   th:field="*{lastName}" required autofocus="autofocus">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo.."
+                   th:field="*{email}" required autofocus="autofocus">
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" placeholder="Tu password.."
+                   th:field="*{lastName}" required autofocus="autofocus">
+            <input type="submit" value="Registrar">
+            <span>Si ya estas registrado pueder ir al <a href="/" th:href="@{/login}"> Login</a></span>
+        </form>
+    </div>
+</body>
+</html>

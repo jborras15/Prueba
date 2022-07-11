@@ -1,0 +1,61 @@
+:root {
+    --mono: 'Ubuntu Mono', monospace;
+    --sans: 'Ubuntu', sans-serif;
+    --font-size: 2.5rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+h1{
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-family: var(--mono);
+    font-size: var(--font-size);
+}
+div{
+    max-width: 800px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+label{
+    color: rgb(2, 133, 133);
+    font-family: var(--sans);
+}
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #00fffa;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: rgb(2, 198, 198);
+}
+.alert{
+    background-color: #00fffa;
+}
+a:hover{
+    text-decoration: none;
+}

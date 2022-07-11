@@ -1,6 +1,5 @@
 package com.example.pruebatecnica.controller;
 
-
 import com.example.pruebatecnica.entity.User;
 import com.example.pruebatecnica.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ public class RegistrationController {
 
     @GetMapping
     public  String showRegistrationForm(){
-        return  "registration";
+        return "registration";
     }
 
     @PostMapping
@@ -32,4 +31,5 @@ public class RegistrationController {
         userService.save(user);
         return "redirect:/registration?success";
     }
+
 }
